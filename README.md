@@ -12,7 +12,7 @@
     <meta name="description" content="Under Construction">
     <meta property="og:description" content="Under Construction" />
     
-    <meta name="author" content="David Meyer" />
+    <meta name="author" content="Chris Lonvick" />
 
     
 

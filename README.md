@@ -1,101 +1,185 @@
 <!DOCTYPE html>
+<!-- Template by quackit.com -->
 <html>
-  <head>
-    <title>Chris Lonvick – Under Construction</title>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>3 Column Layout</title>
+	<style type="text/css">
 
-        <meta charset="utf-8" />
-    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+		/* Layout */
+		body {
+			min-width: 630px;
+		}
 
-    
-    <meta name="description" content="Under Construction">
-    <meta property="og:description" content="Under Construction" />
-    
-    <meta name="author" content="Chris Lonvick" />
+		#container {
+			padding-left: 200px;
+			padding-right: 190px;
+		}
+		
+		#container .column {
+			position: relative;
+			float: left;
+		}
+		
+		#center {
+			padding: 10px 20px;
+			width: 100%;
+		}
+		
+		#left {
+			width: 180px;
+			padding: 0 10px;
+			right: 240px;
+			margin-left: -100%;
+		}
+		
+		#right {
+			width: 130px;
+			padding: 0 10px;
+			margin-right: -100%;
+		}
+		
+		#footer {
+			clear: both;
+		}
+		
+		/* IE hack */
+		* html #left {
+			left: 150px;
+		}
 
-    
+		/* Make the columns the same height as each other */
+		#container {
+			overflow: hidden;
+		}
 
-    <!--[if lt IE 9]>
-      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+		#container .column {
+			padding-bottom: 1001em;
+			margin-bottom: -1000em;
+		}
 
-    <link rel="stylesheet" type="text/css" href="/style.css" />
-    <link rel="alternate" type="application/rss+xml" title="David Meyer - Under Construction" href="/feed.xml" />
+		/* Fix for the footer */
+		* html body {
+			overflow: hidden;
+		}
+		
+		* html #footer-wrapper {
+			float: left;
+			position: relative;
+			width: 100%;
+			padding-bottom: 10010px;
+			margin-bottom: -10000px;
+			background: #fff;
+		}
 
-    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
-  </head>
+		/* Aesthetics */
+		body {
+			margin: 0;
+			padding: 0;
+			font-family:Sans-serif;
+			line-height: 1.5em;
+		}
+		
+		p {
+			color: #555;
+		}
 
-  <body>
-    <div class="wrapper-masthead">
-      <div class="container">
-        <header class="masthead clearfix">
-	   <a href="/images/cml.jpg">
-          <div class="site-info">
-            <h1 class="site-name"><a href="/">Chris Lonvick</a></h1>
-            <p class="site-description">Under Construction</p>
-          </div>
-          <nav>
-            <a href="/">Blog</a>
-          </nav>
-        </header>
-      </div>
-    </div>
+		nav ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+		}
+		
+		nav ul a {
+			color: darkgreen;
+			text-decoration: none;
+		}
 
-    <div id="main" role="main" class="container">
-      <div class="posts">
-  
-    <article class="post">
+		#header, #footer {
+			font-size: large;
+			padding: 0.3em;
+			background: #BCCE98;
+		}
 
-      <h1><a href="/cover-page/">Test Post</a></h1>
+		#left {
+			background: #DAE9BC;
+		}
+		
+		#right {
+			background: #F7FDEB;
+		}
 
-      <div class="entry">
-        <hr />
+		#center {
+			background: #fff;
+		}
 
-
-      </div>
-
-      <a href="/cover-page/" class="read-more">Read More</a>
-    </article>
-  
-    <article class="post">
-
-      <h1><a href="/Basic-Git-Commands/">Basic Git Commands</a></h1>
-
-      <div class="entry">
-        <hr />
-
-
-      </div>
-
-      <a href="/Basic-Git-Commands/" class="read-more">Read More</a>
-    </article>
-  
-</div>
-    </div>
-
-    <div class="wrapper-footer">
-      <div class="container">
-        <footer class="footer">
-          
-<a href="mailto:lonvick@gmail.com"><i class="svg-icon email"></i></a>
-
-<a href="https://www.linkedin.com/in/lonvick"><i class="svg-icon linkedin"></i></a>
-
-
-
-
-        </footer>
-      </div>
-    </div>
-    
-
-  </body>
-<!--
-	[11/11/2022]
+		#container .column {
+			padding-top: 1em;
+		}
+		
+	</style>
 	
-	The following chunk of HTML verifies this page in my
-	Profile metadata over on Mastodon... 
--->
-  <a rel="me" href="https://mas.to/@lonvick"></a>
+	<script type="text/javascript">
+		/* =============================
+		This script generates sample text for the body content. 
+		You can remove this script and any reference to it. 
+		 ============================= */
+		var bodyText=["The smaller your reality, the more convinced you are that you know everything.", "If the facts don't fit the theory, change the facts.", "The past has no power over the present moment.", "This, too, will pass.", "</p><p>You will not be punished for your anger, you will be punished by your anger.", "Peace comes from within. Do not seek it without.", "<h3>Heading</h3><p>The most important moment of your life is now. The most important person in your life is the one you are with now, and the most important activity in your life is the one you are involved with now."]
+		function generateText(sentenceCount){
+			for (var i=0; i<sentenceCount; i++)
+			document.write(bodyText[Math.floor(Math.random()*7)]+" ")
+		}
+	</script>	
+</head>
+
+<body>
+
+	<header id="header"><p>Header...</p></header>
+
+	<div id="container">
+
+		<main id="center" class="column">
+			<article>
+			
+				<h1>Heading</h1>
+				<p><script>generateText(50)</script></p>
+			
+			</article>								
+		</main>
+
+		<nav id="left" class="column">
+			<h3>Left heading</h3>
+			<ul>
+				<li><a href="#">Link 1</a></li>
+				<li><a href="#">Link 2</a></li>
+				<li><a href="#">Link 3</a></li>
+				<li><a href="#">Link 4</a></li>
+				<li><a href="#">Link 5</a></li>
+			</ul>
+			<h3>Left heading</h3>
+			<ul>
+				<li><a href="#">Link 1</a></li>
+				<li><a href="#">Link 2</a></li>
+				<li><a href="#">Link 3</a></li>
+				<li><a href="#">Link 4</a></li>
+				<li><a href="#">Link 5</a></li>
+			</ul>
+
+		</nav>
+
+		<div id="right" class="column">
+			<h3>Right heading</h3>
+			<p><script>generateText(1)</script></p>
+		</div>
+
+	</div>
+
+	<div id="footer-wrapper">
+		<footer id="footer"><p>Footer...</p></footer>
+	</div>
+
+</body>
+
+<a rel="me" href="https://mas.to/@lonvick">Mastodon</a>
+
 </html>
